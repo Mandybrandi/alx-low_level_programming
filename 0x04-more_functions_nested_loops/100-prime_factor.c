@@ -1,4 +1,5 @@
-#include "100-prime_factor.c"
+#include <stdio.h>
+#include "main.h"
 
 /**
  * main - prints largest prime factor.
@@ -8,16 +9,19 @@
 int main(void)
 
 {
-long int n, fp;
-n = 612852475143;
-for (fp = 2; fp <= n; fp++)
+long int var = 612852475143;
+long int primeFact = 2;
+while (var > 1)
 {
-if (n % fp == 0)
+if (var % primeFact == 0)
 {
-n /= fp;
-fp--;
+var /= primeFact;
+}
+else
+{
+primeFact++;
 }
 }
-printf("%ld\n", fp);
+printf("%ld\n", primeFact);
 return (0);
 }
