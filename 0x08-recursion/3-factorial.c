@@ -1,19 +1,19 @@
 #include "main.h"
 
 /**
- * function - that returns the factorial of a given number
- * returns 0 success
+ * factorial - returns the factorial of a given number
  * @n: An integer variable
+ * Return: Always 0(success)
  */
 
-int factorial(int n);
+int factorial(int n)
+
 {
-int n;
 if (n < 0)
 {
 return (-1);
 }
-else if
+else if (n == 0)
 {
 return (1);
 }
